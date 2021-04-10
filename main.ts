@@ -1,10 +1,9 @@
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    let hoge: string;
     
     for (let c of s) {
         if (base.indexOf(c) >= 0) {
             if (c != "n") {
-                if (c == hoge && count > 0) {
+                if (c == hoge) {
                     led.enable(false)
                     basic.pause(400)
                     led.enable(true)
@@ -13,9 +12,11 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
                 mouth[base.indexOf(c)].showImage(0)
                 hoge = c
             } else if (base.slice(1).indexOf(s[count + 1]) >= 0 && count != s.length - 1) {
+                count += 1
                 continue
             } else {
                 mouth[0].showImage(0)
+                hoge = c
             }
             
         }
@@ -26,12 +27,13 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     mouth[0].showImage(0)
     count = 0
 })
+let hoge = ""
 let count = 0
 let mouth : Image[] = []
 let s = ""
 let base = ""
 base = "naiueo"
-s = "oosakakougyoudaigaku"
+s = "kyounogohanwanandesuka"
 mouth = [images.createImage(`
     . . . . .
     . . . . .
