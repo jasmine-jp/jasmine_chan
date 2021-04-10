@@ -12,6 +12,7 @@ def on_button_pressed_a():
         count += 1
     basic.pause(200)
     mouth[0].show_image(0)
+    count = 0
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
 count = 0

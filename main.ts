@@ -17,6 +17,7 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     }
     basic.pause(200)
     mouth[0].showImage(0)
+    count = 0
 })
 let count = 0
 let mouth : Image[] = []
