@@ -2,9 +2,13 @@ def on_button_pressed_a():
     global count
     for c in s:
         if base.index_of(c) >= 0:
-            basic.pause(200)
             if c != "n":
+                if c == hoge and count > 0:
+                    led.enable(False)
+                    basic.pause(400)
+                    led.enable(True)
                 mouth[base.index_of(c)].show_image(0)
+                hoge = c
             elif base.slice(1).index_of(s[count + 1]) >= 0 and count != len(s) - 1:
                 continue
             else:
@@ -20,7 +24,7 @@ mouth: List[Image] = []
 s = ""
 base = ""
 base = "naiueo"
-s = "konnitiwa"
+s = "oosakakougyoudaigaku"
 mouth = [images.create_image("""
     . . . . .
     . . . . .
