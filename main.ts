@@ -1,5 +1,6 @@
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
     
+    hoge = ""
     for (let c of s) {
         if (base.indexOf(c) >= 0) {
             if (c != "n") {
@@ -27,13 +28,13 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     mouth[0].showImage(0)
     count = 0
 })
-let hoge = ""
 let count = 0
+let hoge = ""
 let mouth : Image[] = []
 let s = ""
 let base = ""
 base = "naiueo"
-s = "kyounogohanwanandesuka"
+s = "ooo"
 mouth = [images.createImage(`
     . . . . .
     . . . . .

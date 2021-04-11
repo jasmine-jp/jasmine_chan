@@ -1,5 +1,6 @@
 def on_button_pressed_a():
     global hoge, count
+    hoge = ""
     for c in s:
         if base.index_of(c) >= 0:
             if c != "n":
@@ -21,13 +22,13 @@ def on_button_pressed_a():
     count = 0
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
-hoge = ""
 count = 0
+hoge = ""
 mouth: List[Image] = []
 s = ""
 base = ""
 base = "naiueo"
-s = "kyounogohanwanandesuka"
+s = "ooo"
 mouth = [images.create_image("""
     . . . . .
     . . . . .
