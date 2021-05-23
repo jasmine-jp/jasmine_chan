@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function on_button_pressed_a() {
-    
+    let count = 0
     let hoge = ""
     for (let c of s) {
         if (base.indexOf(c) >= 0) {
@@ -12,9 +12,8 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
                 
                 mouth[base.indexOf(c)].showImage(0)
                 hoge = c
-            } else if (base.slice(1).indexOf(s[count + 1]) >= 0 && count != s.length - 1) {
-                count += 1
-                continue
+            } else if (base.indexOf(s[count + 1]) > 0 && count != s.length - 1) {
+                
             } else {
                 mouth[0].showImage(0)
                 hoge = c
@@ -26,9 +25,7 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     }
     basic.pause(200)
     mouth[0].showImage(0)
-    count = 0
 })
-let count = 0
 let base = "naiueo"
 let s = "konnitiwa"
 let mouth = [images.createImage(`
