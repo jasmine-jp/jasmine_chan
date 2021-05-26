@@ -11,11 +11,13 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
                 }
                 
                 mouth[base.indexOf(c)].showImage(0)
+                music.playTone(hz[base.indexOf(c)], 100)
                 hoge = c
             } else if (base.indexOf(s[count + 1]) > 0 && count != s.length - 1) {
                 
             } else {
                 mouth[0].showImage(0)
+                music.playTone(hz[base.indexOf(c)], 100)
                 hoge = c
             }
             
@@ -28,6 +30,7 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
 })
 let base = "naiueo"
 let s = "konnitiwa"
+let hz = [311, 349, 330, 312, 294, 262]
 let mouth = [images.createImage(`
     . . . . .
     . . . . .

@@ -9,11 +9,13 @@ def on_button_pressed_a():
                     basic.pause(400)
                     led.enable(True)
                 mouth[base.index_of(c)].show_image(0)
+                music.play_tone(hz[base.index_of(c)], 100)
                 hoge = c
             elif base.index_of(s[count+1]) > 0 and count != len(s)-1:
                 pass
             else:
                 mouth[0].show_image(0)
+                music.play_tone(hz[base.index_of(c)], 100)
                 hoge = c
         count += 1
     basic.pause(200)
@@ -22,6 +24,7 @@ input.on_button_pressed(Button.A, on_button_pressed_a)
 
 base = "naiueo"
 s = "konnitiwa"
+hz = [311, 349, 330, 312, 294, 262]
 mouth = [images.create_image("""
     . . . . .
     . . . . .
